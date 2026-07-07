@@ -1,65 +1,144 @@
-import Image from "next/image";
-
 export default function Home() {
+  const roles = [
+    ["Remote Customer Service Representative", "Respond to client inquiries, follow up with leads, and support customer communication remotely."],
+    ["Remote Virtual Assistant", "Support scheduling, email handling, research, data organization, and daily admin tasks remotely."],
+    ["Remote Data Entry Assistant", "Update records, organize client/property information, and maintain accurate digital files remotely."],
+    ["Remote Marketing Assistant", "Assist with online campaigns, social media tasks, property posts, and digital outreach remotely."],
+    ["Remote IT Support Assistant", "Support basic website, email, software, and technical issues remotely."],
+    ["Real Estate Assistant", "Support agents, listings, scheduling and client communication."],
+    ["Customer Support Representative", "Help clients with questions, updates and property inquiries."],
+    ["Marketing Assistant", "Assist with property marketing, online content, and campaigns."],
+    ["Listing Coordinator", "Manage property details, photos, updates, and listing organization."],
+    ["Administrative Assistant", "Handle records, appointments, emails, and daily office coordination."],
+    ["Data Entry Assistant", "Organize property data, client records, reports, and internal files."],
+    ["IT Support Assistant", "Help maintain basic systems, email accounts, website tools, and technical support."],
+    ["Web / Digital Assistant", "Support website updates, online forms, listings, and digital content."],
+    ["Social Media Manager", "Plan and manage posts, engagement, property highlights, and online presence."],
+    ["Sales Representative", "Follow leads, assist prospects, and support client conversion."],
+    ["Property Research Assistant", "Research neighborhoods, property records, market trends, and opportunities."],
+    ["Virtual Assistant", "Provide remote support for scheduling, communication, research, and admin tasks."],
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-[#f4efe6] text-[#132b3a]">
+      <header className="border-b border-[#d8cbb8] bg-[#f4efe6] px-6 py-6">
+        <div className="mx-auto flex max-w-6xl items-center justify-between">
+          <div>
+            <h2 className="font-serif text-4xl tracking-wide">Grandeur</h2>
+            <p className="text-xs uppercase tracking-[0.35em]">Properties</p>
+          </div>
+
+          <a
+            href="/apply"
+            className="rounded-full bg-[#7b2d26] px-6 py-3 font-semibold text-white"
+          >
+            Apply Now
+          </a>
+        </div>
+      </header>
+
+      <section className="bg-[#123044] px-6 py-24 text-white">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm uppercase tracking-[0.4em] text-[#d89b4a]">
+            Grandeur Properties Careers
           </p>
+
+          <h1 className="mt-6 max-w-4xl font-serif text-5xl leading-tight md:text-7xl">
+            Build your career with extraordinary properties and exceptional service.
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-lg text-[#e9ded0]">
+            Join a growing real estate company focused on professionalism,
+            client service, innovation, and long term success.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="/apply"
+              className="rounded-full bg-[#d89b4a] px-7 py-4 font-bold text-[#132b3a]"
+            >
+              Apply Now
+            </a>
+
+            <a
+              href="#roles"
+              className="rounded-full border border-white/30 px-7 py-4 text-white"
+            >
+              View Roles
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      <section className="px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="font-serif text-4xl">
+            Why Work With Grandeur Properties?
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              ["Growth Culture", "Learn, develop your skills, and grow with a company focused on excellence."],
+              ["Professional Standards", "We value communication, responsibility, honesty, and great service."],
+              ["Real Opportunities", "Be part of building trusted real estate experiences for clients."],
+            ].map(([title, desc]) => (
+              <div
+                key={title}
+                className="rounded-2xl border border-[#d8cbb8] bg-white p-7 shadow-sm"
+              >
+                <h3 className="font-serif text-2xl">{title}</h3>
+                <p className="mt-3 text-[#5f5a52]">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="roles" className="mx-auto max-w-6xl px-6 py-16">
+        <p className="text-sm uppercase tracking-[0.35em] text-[#7b2d26]">
+          Open Positions
+        </p>
+
+        <h2 className="mt-4 font-serif text-5xl">Join our growing team.</h2>
+
+        <p className="mt-4 max-w-2xl text-[#5f5a52]">
+          As Grandeur Properties grows, we are building a strong team across real estate,
+          client service, operations, marketing, technology, and administration.
+        </p>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {roles.map(([title, desc]) => (
+            <div
+              key={title}
+              className="rounded-2xl border border-[#d8cbb8] bg-white p-6 shadow-sm"
+            >
+              <h3 className="font-serif text-2xl">{title}</h3>
+              <p className="mt-3 text-[#5f5a52]">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12 bg-[#7b2d26] px-6 py-20 text-white">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="font-serif text-5xl">Hiring Process</h2>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-4">
+            {["Apply Online", "Application Review", "Interview", "Welcome to the Team"].map((item) => (
+              <div key={item} className="rounded-2xl border border-white/20 p-6">
+                {item}
+              </div>
+            ))}
+          </div>
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/apply"
+            className="mt-10 inline-block rounded-full bg-[#d89b4a] px-8 py-4 font-bold text-[#132b3a]"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Start Application
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
