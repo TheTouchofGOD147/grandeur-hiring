@@ -1,0 +1,122 @@
+[
+    {
+        "slug":  "construction-project-manager",
+        "title":  "Construction Project Manager",
+        "category":  "Management"
+    },
+    {
+        "slug":  "civil-engineer",
+        "title":  "Civil Engineer",
+        "category":  "Engineering"
+    },
+    {
+        "slug":  "site-supervisor",
+        "title":  "Construction Site Supervisor",
+        "category":  "Management"
+    },
+    {
+        "slug":  "heavy-equipment-operator",
+        "title":  "Heavy Equipment Operator",
+        "category":  "Field Operations"
+    },
+    {
+        "slug":  "carpenter",
+        "title":  "Construction Carpenter",
+        "category":  "Skilled Trades"
+    },
+    {
+        "slug":  "construction-laborer",
+        "title":  "Construction Laborer",
+        "category":  "Field Operations"
+    },
+    {
+        "slug":  "safety-coordinator",
+        "title":  "Construction Safety Coordinator",
+        "category":  "Safety \u0026 Compliance"
+    },
+    {
+        "slug":  "administrative-coordinator",
+        "title":  "Administrative \u0026 Project Coordinator",
+        "category":  "Office \u0026 Support"
+    },
+    {
+        "slug":  "structural-engineer",
+        "title":  "Structural Engineer",
+        "category":  "Engineering"
+    },
+    {
+        "slug":  "construction-estimator",
+        "title":  "Construction Estimator",
+        "category":  "Engineering"
+    },
+    {
+        "slug":  "quantity-surveyor",
+        "title":  "Quantity Surveyor",
+        "category":  "Engineering"
+    },
+    {
+        "slug":  "land-surveyor",
+        "title":  "Land Surveyor",
+        "category":  "Engineering"
+    },
+    {
+        "slug":  "architect",
+        "title":  "Architect",
+        "category":  "Engineering"
+    },
+    {
+        "slug":  "cad-technician",
+        "title":  "CAD Technician",
+        "category":  "Engineering"
+    },
+    {
+        "slug":  "electrician",
+        "title":  "Construction Electrician",
+        "category":  "Skilled Trades"
+    },
+    {
+        "slug":  "plumber",
+        "title":  "Construction Plumber",
+        "category":  "Skilled Trades"
+    },
+    {
+        "slug":  "hvac-technician",
+        "title":  "HVAC Technician",
+        "category":  "Skilled Trades"
+    },
+    {
+        "slug":  "welder",
+        "title":  "Construction Welder",
+        "category":  "Skilled Trades"
+    },
+    {
+        "slug":  "mason",
+        "title":  "Construction Mason",
+        "category":  "Skilled Trades"
+    },
+    {
+        "slug":  "concrete-finisher",
+        "title":  "Concrete Finisher",
+        "category":  "Skilled Trades"
+    },
+    {
+        "slug":  "crane-operator",
+        "title":  "Crane Operator",
+        "category":  "Field Operations"
+    },
+    {
+        "slug":  "excavation-operator",
+        "title":  "Excavation Equipment Operator",
+        "category":  "Field Operations"
+    },
+    {
+        "slug":  "construction-foreman",
+        "title":  "Construction Foreman",
+        "category":  "Field Operations"
+    },
+    {
+        "slug":  "procurement-specialist",
+        "title":  "Construction Procurement Specialist",
+        "category":  "Office \u0026 Support"
+    }
+]

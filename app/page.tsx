@@ -1,144 +1,149 @@
-export default function Home() {
-  const roles = [
-    ["Remote Customer Service Representative", "Respond to client inquiries, follow up with leads, and support customer communication remotely."],
-    ["Remote Virtual Assistant", "Support scheduling, email handling, research, data organization, and daily admin tasks remotely."],
-    ["Remote Data Entry Assistant", "Update records, organize client/property information, and maintain accurate digital files remotely."],
-    ["Remote Marketing Assistant", "Assist with online campaigns, social media tasks, property posts, and digital outreach remotely."],
-    ["Remote IT Support Assistant", "Support basic website, email, software, and technical issues remotely."],
-    ["Real Estate Assistant", "Support agents, listings, scheduling and client communication."],
-    ["Customer Support Representative", "Help clients with questions, updates and property inquiries."],
-    ["Marketing Assistant", "Assist with property marketing, online content, and campaigns."],
-    ["Listing Coordinator", "Manage property details, photos, updates, and listing organization."],
-    ["Administrative Assistant", "Handle records, appointments, emails, and daily office coordination."],
-    ["Data Entry Assistant", "Organize property data, client records, reports, and internal files."],
-    ["IT Support Assistant", "Help maintain basic systems, email accounts, website tools, and technical support."],
-    ["Web / Digital Assistant", "Support website updates, online forms, listings, and digital content."],
-    ["Social Media Manager", "Plan and manage posts, engagement, property highlights, and online presence."],
-    ["Sales Representative", "Follow leads, assist prospects, and support client conversion."],
-    ["Property Research Assistant", "Research neighborhoods, property records, market trends, and opportunities."],
-    ["Virtual Assistant", "Provide remote support for scheduling, communication, research, and admin tasks."],
-  ];
+import Link from "next/link";
+import careers from "./data/careers.json";
+
+export default function HomePage() {
+  const categories = [...new Set(careers.map((career) => career.category))];
 
   return (
-    <main className="min-h-screen bg-[#f4efe6] text-[#132b3a]">
-      <header className="border-b border-[#d8cbb8] bg-[#f4efe6] px-6 py-6">
-        <div className="mx-auto flex max-w-6xl items-center justify-between">
-          <div>
-            <h2 className="font-serif text-4xl tracking-wide">Grandeur</h2>
-            <p className="text-xs uppercase tracking-[0.35em]">Properties</p>
-          </div>
+    <main className="min-h-screen bg-[#f4f6f9] text-[#061e38]">
+      <header className="border-b border-white/10 bg-[#061e38] px-5 py-5 text-white">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5">
+          <Link href="/" className="text-xl font-black tracking-tight">
+            <span className="text-[#ffc20a]">GRANDEUR</span> BUILDCREST
+          </Link>
 
-          <a
-            href="/apply"
-            className="rounded-full bg-[#7b2d26] px-6 py-3 font-semibold text-white"
-          >
-            Apply Now
-          </a>
+          <nav className="flex items-center gap-5 text-sm font-semibold">
+            <Link href="#careers" className="hover:text-[#ffc20a]">
+              Explore Careers
+            </Link>
+            <Link
+              href="/apply"
+              className="rounded-lg bg-[#ffc20a] px-5 py-3 font-black text-[#061e38]"
+            >
+              Apply Now
+            </Link>
+          </nav>
         </div>
       </header>
 
-      <section className="bg-[#123044] px-6 py-24 text-white">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm uppercase tracking-[0.4em] text-[#d89b4a]">
-            Grandeur Properties Careers
+      <section className="bg-[#061e38] px-5 py-24 text-white">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs font-black tracking-[0.25em] text-[#ffc20a]">
+            GRANDEUR BUILDCREST CONSTRUCTION GROUP
           </p>
 
-          <h1 className="mt-6 max-w-4xl font-serif text-5xl leading-tight md:text-7xl">
-            Build your career with extraordinary properties and exceptional service.
+          <h1 className="mt-7 max-w-5xl text-5xl font-black leading-tight md:text-7xl">
+            Build your future.
+            <span className="block text-[#ffc20a]">
+              Shape what comes next.
+            </span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg text-[#e9ded0]">
-            Join a growing real estate company focused on professionalism,
-            client service, innovation, and long term success.
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
+            Explore construction career paths across engineering,
+            project management, skilled trades, site operations,
+            safety, and professional support.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
+            <Link
+              href="#careers"
+              className="rounded-lg bg-[#ffc20a] px-7 py-4 font-black text-[#061e38]"
+            >
+              Explore Career Paths
+            </Link>
+
+            <Link
               href="/apply"
-              className="rounded-full bg-[#d89b4a] px-7 py-4 font-bold text-[#132b3a]"
+              className="rounded-lg border border-white/30 px-7 py-4 font-bold"
             >
-              Apply Now
-            </a>
-
-            <a
-              href="#roles"
-              className="rounded-full border border-white/30 px-7 py-4 text-white"
-            >
-              View Roles
-            </a>
+              Submit an Application
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-16">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="font-serif text-4xl">
-            Why Work With Grandeur Properties?
-          </h2>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              ["Growth Culture", "Learn, develop your skills, and grow with a company focused on excellence."],
-              ["Professional Standards", "We value communication, responsibility, honesty, and great service."],
-              ["Real Opportunities", "Be part of building trusted real estate experiences for clients."],
-            ].map(([title, desc]) => (
-              <div
-                key={title}
-                className="rounded-2xl border border-[#d8cbb8] bg-white p-7 shadow-sm"
-              >
-                <h3 className="font-serif text-2xl">{title}</h3>
-                <p className="mt-3 text-[#5f5a52]">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="roles" className="mx-auto max-w-6xl px-6 py-16">
-        <p className="text-sm uppercase tracking-[0.35em] text-[#7b2d26]">
-          Open Positions
-        </p>
-
-        <h2 className="mt-4 font-serif text-5xl">Join our growing team.</h2>
-
-        <p className="mt-4 max-w-2xl text-[#5f5a52]">
-          As Grandeur Properties grows, we are building a strong team across real estate,
-          client service, operations, marketing, technology, and administration.
-        </p>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {roles.map(([title, desc]) => (
-            <div
+      <section className="mx-auto max-w-7xl px-5 py-20">
+        <div className="grid gap-6 md:grid-cols-3">
+          {[
+            ["Build with purpose", "Explore the people and disciplines behind construction projects."],
+            ["Develop your expertise", "Discover engineering, field, management, and technical career paths."],
+            ["Explore opportunities", "Learn about professional roles and submit your information for consideration."],
+          ].map(([title, description]) => (
+            <article
               key={title}
-              className="rounded-2xl border border-[#d8cbb8] bg-white p-6 shadow-sm"
+              className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
             >
-              <h3 className="font-serif text-2xl">{title}</h3>
-              <p className="mt-3 text-[#5f5a52]">{desc}</p>
-            </div>
+              <div className="mb-6 h-1 w-14 rounded-full bg-[#ffc20a]" />
+              <h2 className="text-2xl font-black">{title}</h2>
+              <p className="mt-4 leading-7 text-slate-600">{description}</p>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="mt-12 bg-[#7b2d26] px-6 py-20 text-white">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="font-serif text-5xl">Hiring Process</h2>
+      <section id="careers" className="bg-white px-5 py-20">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs font-black tracking-[0.2em] text-amber-700">
+            EXPLORE YOUR PATH
+          </p>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-4">
-            {["Apply Online", "Application Review", "Interview", "Welcome to the Team"].map((item) => (
-              <div key={item} className="rounded-2xl border border-white/20 p-6">
-                {item}
-              </div>
+          <h2 className="mt-4 text-4xl font-black md:text-5xl">
+            Construction Careers
+          </h2>
+
+          <p className="mt-5 max-w-3xl leading-8 text-slate-600">
+            Browse {careers.length} career profiles across {categories.length}
+            {" "}professional categories. These profiles describe career
+            paths and do not represent confirmed open vacancies.
+          </p>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {careers.map((career) => (
+              <article
+                key={career.slug}
+                className="flex flex-col rounded-2xl border border-slate-200 bg-[#f8fafc] p-7 transition hover:border-amber-400 hover:shadow-lg"
+              >
+                <p className="text-xs font-black uppercase tracking-widest text-amber-700">
+                  {career.category}
+                </p>
+
+                <h3 className="mt-4 flex-1 text-xl font-black">
+                  {career.title}
+                </h3>
+
+                <Link
+                  href={`/apply?position=${encodeURIComponent(career.title)}`}
+                  className="mt-7 inline-flex w-fit rounded-lg bg-[#ffc20a] px-5 py-3 text-sm font-black"
+                >
+                  Apply for Consideration
+                </Link>
+              </article>
             ))}
           </div>
-
-          <a
-            href="/apply"
-            className="mt-10 inline-block rounded-full bg-[#d89b4a] px-8 py-4 font-bold text-[#132b3a]"
-          >
-            Start Application
-          </a>
         </div>
       </section>
+
+      <section className="bg-[#061e38] px-5 py-20 text-white">
+        <div className="mx-auto max-w-7xl text-center">
+          <h2 className="text-4xl font-black">
+            Ready to take the next step?
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-slate-300">
+            Share your experience and professional interests with our team.
+          </p>
+          <Link
+            href="/apply"
+            className="mt-8 inline-block rounded-lg bg-[#ffc20a] px-8 py-4 font-black text-[#061e38]"
+          >
+            Start Application
+          </Link>
+        </div>
+      </section>
+
+      <footer className="bg-[#041529] px-5 py-8 text-center text-sm text-slate-400">
+        Grandeur BuildCrest Construction Group
+      </footer>
     </main>
   );
 }
